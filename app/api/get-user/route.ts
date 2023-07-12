@@ -1,5 +1,5 @@
-import { tracer, context } from "../../../instrumentation";
 import { NextResponse } from "next/server";
+import { tracer, context } from "../../../instrumentation";
 
 export async function GET() {
   const span = tracer.startSpan("getUser", undefined, context.active());
