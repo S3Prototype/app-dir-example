@@ -1,9 +1,17 @@
-export function GET(request: Request) {
-  const { searchParams } = new URL(request.url);
-  const name = searchParams.get("name");
-  return new Response(`Hello, ${name}`, {
-    status: 200,
-  });
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+export function GET(request: NextRequest) {
+  return NextResponse.json(
+    {
+      body: request.body,
+      path: request.nextUrl.pathname,
+      query: request.nextUrl.search,
+      cookies: request.cookies.getAll(),
+    },
+    {
+      status: 200,
+    }
+  );
 }
 
 export const runtime = "edge"; // 'nodejs' is the default
