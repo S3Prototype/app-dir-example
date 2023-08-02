@@ -13,5 +13,3 @@ export function GET(request: NextRequest) {
     }
   );
 }
-
-export const runtime = "edge"; // 'nodejs' is the default
