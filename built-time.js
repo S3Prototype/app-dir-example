@@ -1,1 +1,0 @@
-module.exports = 'Wed Aug 02 2023 08:01:00 GMT-0500 (Central Daylight Time)'

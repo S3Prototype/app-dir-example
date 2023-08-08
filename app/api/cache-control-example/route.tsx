@@ -1,9 +1,7 @@
-const BuiltTime = require("built-time.js");
+const BuiltTime = require("built-time.ts");
 export async function GET(request: Request) {
   return new Response(
-    `
-  This Serverless Function was built at ${new Date(BuiltTime)}.
-`,
+    `This Serverless Function was built at ${new Date(BuiltTime)}.`,
     {
       status: 200,
       headers: {
